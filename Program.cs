@@ -10,7 +10,11 @@ namespace GameCardCreator
         [STAThread]
         static void Main()
         {
+            Console.WriteLine("Bem vindo ao GameCardCreator");
+            Console.WriteLine("Esse software serve para Criar cards de jogos de PS1 para o PS vita");
+            Console.WriteLine("Por favor escolha a imagem que será usada para o Card:");
             PictureBox pictureBox1 = new PictureBox();
+
             // Carrega a imagem em um controle PictureBox
             pictureBox1.Image = Image.FromFile("imagem.jpg");
 
@@ -27,8 +31,7 @@ namespace GameCardCreator
             // Salva a imagem atualizada em um arquivo
             pictureBox1.Image.Save("imagem_com_texto.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
 
-            // Exibe a imagem novamente no controle PictureBox
-            pictureBox1.Refresh();
+            
 
         }
     }
