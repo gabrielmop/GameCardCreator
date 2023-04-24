@@ -46,16 +46,15 @@ namespace GameCardCreator
 
             Console.WriteLine("Escreva a Data de Lançamento do Jogo:");
             lancamento = $"Lançamento:\r\n{Console.ReadLine()}";
-            tamanho = 19;
-
+            
             Console.WriteLine("Escreva o Genero do jogo:");
             genero = $"Genero:\r\n{Console.ReadLine()}";
 
             Console.WriteLine("Escreva a Desenvolvedora do jogo:");
-            dev = $"Genero:\r\n{Console.ReadLine()}";
+            dev = $"Desenvolvedora:\r\n{Console.ReadLine()}";
 
             Console.WriteLine("Escreva a Publicante do jogo:");
-            publi = $"Genero:\r\n{Console.ReadLine()}";
+            publi = $"Publicante:\r\n{Console.ReadLine()}";
             
             
             Console.WriteLine("Escreva o Codigo do Disco 1:");
@@ -102,25 +101,19 @@ namespace GameCardCreator
 
 
             if (arquivo2.ShowDialog() == DialogResult.OK)
-            {
-                // Carrega as imagens
+            {               
                 Image imagemFundo = pictureBox1.Image;
                 Image imagemSobreposta = Image.FromFile(arquivo2.FileName);
-
-                // Define o tamanho da imagem sobreposta redimensionada
+                                
                 int largura = 495;
                 int altura = 338;
-
-                // Cria uma miniatura da imagem sobreposta com o tamanho desejado
+                                
                 Image imagemRedimensionada = imagemSobreposta.GetThumbnailImage(largura, altura, null, IntPtr.Zero);
-
-                // Cria um objeto Graphics a partir da imagem de fundo
+                                
                 using (g = Graphics.FromImage(imagemFundo))
-                {
-                    // Define a posição em que a imagem sobreposta será desenhada
+                {                    
                     Point posicao = new Point(32, 22);
 
-                    // Desenha a imagem sobreposta redimensionada na posição definida
                     g.DrawImage(imagemRedimensionada, posicao);
                 }
             }
