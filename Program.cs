@@ -28,6 +28,8 @@ namespace GameCardCreator
             OpenFileDialog arquivo = new OpenFileDialog();
             arquivo.Filter = "Arquivos de imagem (*.jpg)(*.png)|*.jpg";
             arquivo.Title = "Escolha o Card";
+            arquivo.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
 
             if (arquivo.ShowDialog() == DialogResult.OK)
             {
@@ -76,15 +78,15 @@ namespace GameCardCreator
             {
                 tamanho = 14;
             }
-            g.DrawString(nome, fonte, corTexto, new PointF(560, 71));
+            g.DrawString(nome, fonte, corTexto, new PointF(560, 74));
             if (tamanho == 14)
             {
                 tamanho = 19;
             }           
-            g.DrawString(lancamento, fonte, corTexto, new PointF(555, 130));
-            g.DrawString(genero, fonte, corTexto, new PointF(555, 220));
-            g.DrawString(dev, fonte, corTexto, new PointF(555, 305));
-            g.DrawString(publi, fonte, corTexto, new PointF(555, 395));
+            g.DrawString(lancamento, fonte, corTexto, new PointF(555, 120));
+            g.DrawString(genero, fonte, corTexto, new PointF(555, 210));
+            g.DrawString(dev, fonte, corTexto, new PointF(555, 295));
+            g.DrawString(publi, fonte, corTexto, new PointF(555, 385));
             tamanho = 18;
             corTexto = new SolidBrush(Color.Black);
             g.DrawString(d1, fonte, corTexto, new PointF(180, 371));
@@ -124,26 +126,14 @@ namespace GameCardCreator
             }
 
             SaveFileDialog salvarArquivo = new SaveFileDialog();
-
-            // Define os filtros de arquivos permitidos
-            salvarArquivo.Filter = "Arquivos de imagem (*.jpg, *.png, *.bmp)|*.jpg;*.png;*.bmp|Todos os arquivos (*.*)|*.*";
-
-            // Define o diretório inicial
-            salvarArquivo.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-
-
-            // Exibe o diálogo e verifica se o usuário clicou em "OK"
+            salvarArquivo.Filter = "Arquivos de imagem (*.jpg, *.png, *.bmp)|*.jpg;*.png;*.bmp";
+            salvarArquivo.Title = "Escolha onde salvar o Card:";
+           
             if (salvarArquivo.ShowDialog() == DialogResult.OK)
             {
-                // Salva o arquivo no caminho escolhido pelo usuário
+                
                 pictureBox1.Image.Save(salvarArquivo.FileName); 
             }
-
-                //pictureBox1.Image.Save("imagem_com_texto.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
-                Console.WriteLine("Imagem Salva com sucesso! Obrigado por usar o GameCardCreator");
-
-
-
         }
     }
 }
