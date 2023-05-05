@@ -13,9 +13,7 @@ namespace GameCardCreator
         {
             string nome, lancamento, genero, dev, publi, d1, d2, d3, d4, d5;
             PictureBox pictureBox1 = new PictureBox();
-            
-            int tamanho = 19;
-            Font fonte = new("Gamestation Condensed", tamanho);
+            Font fonte = new("Gamestation Condensed", 19);
             SolidBrush corTexto = new SolidBrush(Color.White);
           
 
@@ -26,7 +24,7 @@ namespace GameCardCreator
 
             //Escolher Arquivo
             OpenFileDialog arquivo = new OpenFileDialog();
-            arquivo.Filter = "Arquivos de imagem (*.jpg)(*.png)|*.jpg";
+            arquivo.Filter = "Arquivos de imagem (*.jpg)(*.png)|*.jpg;*.png";
             arquivo.Title = "Escolha o Card";
             arquivo.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
@@ -59,44 +57,51 @@ namespace GameCardCreator
             
             Console.WriteLine("Escreva o Codigo do Disco 1:");
             d1 = Console.ReadLine();
-            
-            Console.WriteLine("Escreva o Codigo do Disco 2: (Pressione Enter se não houver codigo)");
-            d2 = Console.ReadLine();
-            
-            Console.WriteLine("Escreva o Codigo do Disco 3: (Pressione Enter se não houver codigo)");
-            d3 = Console.ReadLine();
-            
-            Console.WriteLine("Escreva o Codigo do Disco 4: (Pressione Enter se não houver codigo)");
-            d4 = Console.ReadLine();
-           
-            Console.WriteLine("Escreva o Codigo do Disco 5: (Pressione Enter se não houver codigo)");
-            d5 = Console.ReadLine();
 
-
-            if (nome.Length >= 27)
+            for (int i = 1; i <= 1; i++)
             {
-                tamanho = 14;
+
+                Console.WriteLine("Escreva o Codigo do Disco 2: (Pressione Enter se não houver codigo)");
+                d2 = Console.ReadLine();
+                if (d2 == "")
+                     break;
+               else
+                    g.DrawString(d2, fonte, corTexto = new SolidBrush(Color.Black), new PointF(180, 397));
+
+                Console.WriteLine("Escreva o Codigo do Disco 3: (Pressione Enter se não houver codigo)");
+                d3 = Console.ReadLine();
+                if (d3 == "")
+                    break;
+                else
+                    g.DrawString(d3, fonte, corTexto = new SolidBrush(Color.Black), new PointF(180, 423));
+
+
+                Console.WriteLine("Escreva o Codigo do Disco 4: (Pressione Enter se não houver codigo)");
+                d4 = Console.ReadLine();
+                if (d4 == "")
+                    break;
+                else
+                    g.DrawString(d4, fonte, corTexto = new SolidBrush(Color.Black), new PointF(180, 448));
+
+                Console.WriteLine("Escreva o Codigo do Disco 5: (Pressione Enter se não houver codigo)");
+                d5 = Console.ReadLine();
+                if (d5 == "")
+                    break;
+                else
+                    g.DrawString(d5, fonte, corTexto = new SolidBrush(Color.Black), new PointF(180, 472));
             }
-            g.DrawString(nome, fonte, corTexto, new PointF(560, 74));
-            if (tamanho == 14)
-            {
-                tamanho = 19;
-            }           
+
+           
+            g.DrawString(nome, fonte, corTexto = new SolidBrush(Color.White), new PointF(560, 74));        
             g.DrawString(lancamento, fonte, corTexto, new PointF(555, 120));
             g.DrawString(genero, fonte, corTexto, new PointF(555, 210));
             g.DrawString(dev, fonte, corTexto, new PointF(555, 295));
             g.DrawString(publi, fonte, corTexto, new PointF(555, 385));
-            tamanho = 18;
-            corTexto = new SolidBrush(Color.Black);
-            g.DrawString(d1, fonte, corTexto, new PointF(180, 371));
-            g.DrawString(d2, fonte, corTexto, new PointF(180, 397));
-            g.DrawString(d3, fonte, corTexto, new PointF(180, 423));
-            g.DrawString(d4, fonte, corTexto, new PointF(180, 448));
-            g.DrawString(d5, fonte, corTexto, new PointF(180, 472));
+            g.DrawString(d1, fonte, corTexto = new SolidBrush(Color.Black), new PointF(180, 371)); 
 
             Console.WriteLine("Por favor seclecione a imagem para a Capa do Jogo:");
             OpenFileDialog arquivo2 = new OpenFileDialog();
-            arquivo.Filter = "Arquivos de imagem (*.jpg)(*.png)|*.jpg";
+            arquivo.Filter = "Arquivos de imagem (*.jpg)(*.png)|*.jpg;*.png";
             arquivo.Title = "Escolha a Capa do jogo";
 
 
