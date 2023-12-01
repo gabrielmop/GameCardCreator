@@ -3,7 +3,6 @@ C:\Users\gabri\Documents\Codepokes\GameCardCreator\bin\Debug\net6.0-windows\Game
 C:\Users\gabri\Documents\Codepokes\GameCardCreator\bin\Debug\net6.0-windows\GameCardCreator.runtimeconfig.json
 C:\Users\gabri\Documents\Codepokes\GameCardCreator\bin\Debug\net6.0-windows\GameCardCreator.dll
 C:\Users\gabri\Documents\Codepokes\GameCardCreator\bin\Debug\net6.0-windows\GameCardCreator.pdb
-C:\Users\gabri\Documents\Codepokes\GameCardCreator\obj\Debug\net6.0-windows\GameCardCreator.csproj.AssemblyReference.cache
 C:\Users\gabri\Documents\Codepokes\GameCardCreator\obj\Debug\net6.0-windows\GameCardCreator.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\gabri\Documents\Codepokes\GameCardCreator\obj\Debug\net6.0-windows\GameCardCreator.AssemblyInfoInputs.cache
 C:\Users\gabri\Documents\Codepokes\GameCardCreator\obj\Debug\net6.0-windows\GameCardCreator.AssemblyInfo.cs
