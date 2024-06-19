@@ -28,5 +28,8 @@
         public int posicaoy { get; set; }
         public SolidBrush corinfo { get; set; }
         public SolidBrush cordisco { get; set; }
+        public SolidBrush cornome { get; set; }
+        public int tamanhoFonte { get; set; }
+        public int tamanhoDisco {  get; set; }
     }
 }

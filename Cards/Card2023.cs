@@ -1,8 +1,8 @@
 ﻿namespace GameCardCreator.Cards
 {
-    internal class Card2022 : CardBase
+    internal class Card2023 : CardBase
     {
-        public Card2022()
+        public Card2023()
 
         {
             nomex = 560;
@@ -30,7 +30,9 @@
             posicaox = 32;
             posicaoy = 22;
             corinfo = new SolidBrush(Color.White);
+            cornome = new SolidBrush(Color.White);
             cordisco = new SolidBrush(Color.Black);
+            tamanhoFonte = 19;
 
         }
     }
